@@ -1,18 +1,8 @@
 var barwidth = 120;
 var barheight = 14;
-var color_range = [
-  '#ffffd9',
-  '#edf8b1',
-  '#c7e9b4',
-  '#7fcdbb',
-  '#41b6c4',
-  '#1d91c0',
-  '#225ea8',
-  '#253494',
-  '#081d58'
-];
+var color_range = ['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026'];
 var width = d3.scaleLinear().domain([0, 1]).range([0, 70]);
-var data_bins = [0.11, 0.22, 0.33, 0.44, 0.55, 0.66, 0.77, 0.88, 1];
+var data_bins = [11, 22, 33, 44, 55, 66, 77, 88, 100];
 var colorScale = d3.scaleLinear().domain(data_bins).range(color_range);
 
 var container = d3.select('#overlay-ses');
@@ -21,16 +11,18 @@ var container = d3.select('#overlay-ses');
 
 var layout = [
   {
-    title: 'Socioeconomic Status',
+    title: 'SERF Data - Overall Categories',
     items: [
-      { title: 'Below poverty', code: 'EPL_POV' },
-      { title: 'Unemployed', code: 'EPL_UNEMP' },
-      { title: 'Income', code: 'EPL_PCI' },
-      { title: 'No High School Diploma', code: 'EPL_NOHSDP' }
+      { title: 'Overall', code: 'SERF' },
+      { title: 'Education', code: 'Educatn' },
+      { title: 'Health', code: 'Health' },
+      { title: 'Housing', code: 'Housing' },
+      { title: 'Food', code: 'Food' },
+      { title: 'Work', code: 'Work' }
     ]
   },
   {
-    title: 'Household Composition',
+    title: 'Education Subcategories',
     items: [
       { title: 'Aged 65 or Over', code: 'EPL_AGE65' },
       { title: 'Aged 17 or Younger', code: 'EPL_AGE17' },
@@ -39,14 +31,32 @@ var layout = [
     ]
   },
   {
-    title: 'Minority Status/Language',
+    title: 'Health Subcategories',
     items: [
       { title: 'Minority', code: 'EPL_MINRTY' },
       { title: 'Speak English "Less than Well"', code: 'EPL_LIMENG' }
     ]
   },
   {
-    title: 'Housing and Transportation',
+    title: 'Housing Subcategories',
+    items: [
+      { title: 'Multi-Unit Structures', code: 'EPL_MUNIT' },
+      { title: 'Mobile Homes', code: 'EPL_MOBILE' },
+      { title: 'Crowding', code: 'EPL_CROWD' },
+      { title: 'No Vehicle', code: 'EPL_NOVEH' }
+    ]
+  },
+   {
+    title: 'Food Subcategories',
+    items: [
+      { title: 'Multi-Unit Structures', code: 'EPL_MUNIT' },
+      { title: 'Mobile Homes', code: 'EPL_MOBILE' },
+      { title: 'Crowding', code: 'EPL_CROWD' },
+      { title: 'No Vehicle', code: 'EPL_NOVEH' }
+    ]
+  },
+   {
+    title: 'Work Subcategories',
     items: [
       { title: 'Multi-Unit Structures', code: 'EPL_MUNIT' },
       { title: 'Mobile Homes', code: 'EPL_MOBILE' },
@@ -68,10 +78,18 @@ function updateSidebar(options) {
     });
   });
 
-  d3.select('#location').text(options.LOCATION);
-  d3.select('#F_Total-bignumber').text(options.F_TOTAL);
+  d3.select('#overlay-title').text(options.NAME);
+  d3.select('#economy').text(function(d) {
+    return "Economic Classification: " + (options.ECONOMY);
+  });
+  d3.select('#income').text(function(d) {
+    return "Income Classification: " + (options.INCOME_);
+  });
+  d3.select('#F_Total-bignumber').text(function(d) {
+    return d3.format('.1f')(options.SERF);
+  });
   d3.select('#population').text(function(d) {
-    return 'Population ' + d3.format(',')(options.E_TOTPOP);
+    return 'Population ' + d3.format(',')(options.POP_EST);
   });
   d3.select('#diocese').text(function(d) {
     return 'Catholic Diocese: ' + options.Diocese;
