@@ -12,10 +12,10 @@ var geocoder = new MapboxGeocoder({
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/rmcarder/cj2s919rw00002sogl9xsofqc',
-  zoom: 1,
+  zoom: 2,
   hash:true,
-  center: [0,0],
-  minZoom: 1,
+  center: [12,90],
+  minZoom: 2,
   // We only need to preserve drawing buffer if we implement printing
   // otherwise it is a performance drawback
   // preserveDrawingBuffer: true

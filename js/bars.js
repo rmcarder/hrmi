@@ -91,8 +91,8 @@ function updateSidebar(options) {
   d3.select('#population').text(function(d) {
     return 'Population ' + d3.format(',')(options.POP_EST);
   });
-  d3.select('#diocese').text(function(d) {
-    return 'Catholic Diocese: ' + options.Diocese;
+  d3.select('#gdp').text(function(d) {
+    return 'GDP Per Capita: ' + d3.format(',.0f')(options.GDPPC);
   });
 
   var categories = container
