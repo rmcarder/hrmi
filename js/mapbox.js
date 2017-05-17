@@ -11,11 +11,11 @@ var geocoder = new MapboxGeocoder({
 
 var map = new mapboxgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/rmcarder/cizru0urw00252ro740x73cea',
+    style: 'mapbox://styles/rmcarder/cj2s919rw00002sogl9xsofqc',
   zoom: 1,
   hash:true,
   center: [0,0],
-  minZoom: 3,
+  minZoom: 1,
   // We only need to preserve drawing buffer if we implement printing
   // otherwise it is a performance drawback
   // preserveDrawingBuffer: true
@@ -43,18 +43,17 @@ map.addLayer({
                 property: 'SERF',
                 type: 'exponential',
                 stops: [
-                    [10, '#f0f9e8'],
-                    [20, '#ccebc5'],
-                    [30, '#a8ddb5'],
-                    [40, '#7bccc4'],
-                    [50, '#4eb3d3'],
-                    [60, '#2b8cbe'],
-                    [70, '#08589e'],
-                    [90, '#08589e'],
-                    [100, '#08589e'],
-                    [110, '#08589e'],
-                    [120, '#08589e'],
-                    [130, '#08589e']]
+                    [9, '#a50026'],
+                    [18, '#d73027'],
+                    [27, '#f46d43'],
+                    [36, '#fdae61'],
+                    [45, '#fee08b'],
+                    [54, '#ffffbf'],
+                    [63, '#d9ef8b'],
+                    [72, '#a6d96a'],
+                    [81, '#66bd63'],
+                    [90, '#1a9850'],
+                    [100, '#006837']]
             },
             'fill-opacity': {
               stops:[[0,0.5],[8,0.5],[10,0]]
@@ -108,7 +107,7 @@ map.on('mousemove', function (e) {
            layers: ['county']
         });
 
-            updateSidebar(county[0].properties);
+          updateSidebar(county[0].properties);
 
           console.log('Select county', county[0].properties);
         

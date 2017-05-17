@@ -1,8 +1,8 @@
 var barwidth = 120;
 var barheight = 14;
-var color_range = ['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026'];
-var width = d3.scaleLinear().domain([0, 1]).range([0, 70]);
-var data_bins = [11, 22, 33, 44, 55, 66, 77, 88, 100];
+var color_range = ['#a50026','#d73027','#f46d43','#fdae61','#fee08b','#ffffbf','#d9ef8b','#a6d96a','#66bd63','#1a9850','#006837'];
+var width = d3.scaleLinear().domain([0, 100]).range([0, 70]);
+var data_bins = [9, 18, 27, 36, 45, 54, 63, 72, 81, 90, 100];
 var colorScale = d3.scaleLinear().domain(data_bins).range(color_range);
 
 var container = d3.select('#overlay-ses');
@@ -74,7 +74,7 @@ function updateSidebar(options) {
   console.log(options);
   layout.forEach(function(category) {
     category.items.forEach(function(item) {
-      item.value = options[item.code] || options[item.code.substring(0, 7)];
+      item.value = options[item.code];
     });
   });
 
@@ -180,7 +180,7 @@ function updateSidebar(options) {
     .attr('rx', 6)
     .attr('ry', 6)
     .attr('height', 12)
-    .attr('width', width(1))
+    .attr('width', width(100))
     .style('stroke', '#ccc')
     .style('fill', 'transparent');
 
