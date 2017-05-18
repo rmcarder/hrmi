@@ -17,7 +17,7 @@ var layout = [
     ]
   },
   {
-    title: 'Education Subcategories',
+    title: 'Education',
     items: [
       { title: 'Education Overall', code: 'Educatn' },
       { title: 'Gross School Enrollment', code: 'EnrllAP' },
@@ -26,7 +26,7 @@ var layout = [
     ]
   },
   {
-    title: 'Health Subcategories',
+    title: 'Health',
     items: [
       { title: 'Health Overall', code: 'Health' },
       { title: 'Child Survival', code: 'ChldSAP' },
@@ -35,7 +35,7 @@ var layout = [
     ]
   },
   {
-    title: 'Housing Subcategories',
+    title: 'Housing',
     items: [
       { title: 'Housing Overall', code: 'Housing' },
       { title: 'Improved Sanitation', code: 'SnttnAP' },
@@ -43,14 +43,14 @@ var layout = [
     ]
   },
    {
-    title: 'Food Subcategories',
+    title: 'Food',
     items: [
       { title: 'Food Overall', code: 'Food' },
       { title: 'Age 5 Not Stunted', code: 'Stnt_AP' }
     ]
   },
    {
-    title: 'Work Subcategories',
+    title: 'Work',
     items: [
       { title: 'Work Overall', code: 'Work' },
       { title: 'Population Not Poor', code: 'NtPrAdP' }
