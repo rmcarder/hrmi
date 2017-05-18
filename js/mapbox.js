@@ -43,16 +43,18 @@ map.addLayer({
                 property: 'SERF',
                 type: 'exponential',
                 stops: [
-                    [9, '#a50026'],
-                    [18, '#d73027'],
-                    [27, '#f46d43'],
-                    [36, '#fdae61'],
-                    [45, '#fee08b'],
-                    [54, '#ffffbf'],
-                    [63, '#d9ef8b'],
-                    [72, '#a6d96a'],
-                    [81, '#66bd63'],
-                    [90, '#1a9850'],
+               
+                    [.001, 'rgba(255,255,255,0)'],
+                    [40, '#a50026'],
+                    [46, '#d73027'],
+                    [52, '#f46d43'],
+                    [58, '#fdae61'],
+                    [64, '#fee08b'],
+                    [70, '#ffffbf'],
+                    [76, '#d9ef8b'],
+                    [82, '#a6d96a'],
+                    [88, '#66bd63'],
+                    [94, '#1a9850'],
                     [100, '#006837']]
             },
             'fill-opacity': {
@@ -63,12 +65,177 @@ map.addLayer({
 },"airport-label"
 );
 
+map.addLayer({
+    "id": "Educatn",
+    "type": "fill",
+    "source": "maps",
+    "source-layer":"Output-74ybcd",
+    "maxzoom": 10,
+    paint: {
+            'fill-color': {
+                property: 'Educatn',
+                type: 'exponential',
+                stops: [
+               
+                    [.001, 'rgba(255,255,255,0)'],
+                    [40, '#a50026'],
+                    [46, '#d73027'],
+                    [52, '#f46d43'],
+                    [58, '#fdae61'],
+                    [64, '#fee08b'],
+                    [70, '#ffffbf'],
+                    [76, '#d9ef8b'],
+                    [82, '#a6d96a'],
+                    [88, '#66bd63'],
+                    [94, '#1a9850'],
+                    [100, '#006837']]
+            },
+            'fill-opacity': {
+              stops:[[0,0.5],[8,0.5],[10,0]]
+            }
+        }
 
-var toggleableLayerIds = [ 'Country'
-              ];
+},"airport-label"
+);
+map.addLayer({
+    "id": "Health",
+    "type": "fill",
+    "source": "maps",
+    "source-layer":"Output-74ybcd",
+    "maxzoom": 10,
+    paint: {
+            'fill-color': {
+                property: 'Health',
+                type: 'exponential',
+                stops: [
+               
+                    [.001, 'rgba(255,255,255,0)'],
+                    [40, '#a50026'],
+                    [46, '#d73027'],
+                    [52, '#f46d43'],
+                    [58, '#fdae61'],
+                    [64, '#fee08b'],
+                    [70, '#ffffbf'],
+                    [76, '#d9ef8b'],
+                    [82, '#a6d96a'],
+                    [88, '#66bd63'],
+                    [94, '#1a9850'],
+                    [100, '#006837']]
+            },
+            'fill-opacity': {
+              stops:[[0,0.5],[8,0.5],[10,0]]
+            }
+        }
+
+},"airport-label"
+);
+map.addLayer({
+    "id": "Housing",
+    "type": "fill",
+    "source": "maps",
+    "source-layer":"Output-74ybcd",
+    "maxzoom": 10,
+    paint: {
+            'fill-color': {
+                property: 'Housing',
+                type: 'exponential',
+                stops: [
+               
+                    [.001, 'rgba(255,255,255,0)'],
+                    [40, '#a50026'],
+                    [46, '#d73027'],
+                    [52, '#f46d43'],
+                    [58, '#fdae61'],
+                    [64, '#fee08b'],
+                    [70, '#ffffbf'],
+                    [76, '#d9ef8b'],
+                    [82, '#a6d96a'],
+                    [88, '#66bd63'],
+                    [94, '#1a9850'],
+                    [100, '#006837']]
+            },
+            'fill-opacity': {
+              stops:[[0,0.5],[8,0.5],[10,0]]
+            }
+        }
+
+},"airport-label"
+);
+map.addLayer({
+    "id": "Food",
+    "type": "fill",
+    "source": "maps",
+    "source-layer":"Output-74ybcd",
+    "maxzoom": 10,
+    paint: {
+            'fill-color': {
+                property: 'Food',
+                type: 'exponential',
+                stops: [
+               
+                    [.001, 'rgba(255,255,255,0)'],
+                    [40, '#a50026'],
+                    [46, '#d73027'],
+                    [52, '#f46d43'],
+                    [58, '#fdae61'],
+                    [64, '#fee08b'],
+                    [70, '#ffffbf'],
+                    [76, '#d9ef8b'],
+                    [82, '#a6d96a'],
+                    [88, '#66bd63'],
+                    [94, '#1a9850'],
+                    [100, '#006837']]
+            },
+            'fill-opacity': {
+              stops:[[0,0.5],[8,0.5],[10,0]]
+            }
+        }
+
+},"airport-label"
+);
+map.addLayer({
+    "id": "Work",
+    "type": "fill",
+    "source": "maps",
+    "source-layer":"Output-74ybcd",
+    "maxzoom": 10,
+    paint: {
+            'fill-color': {
+                property: 'Work',
+                type: 'exponential',
+                stops: [
+               
+                    [.001, 'rgba(255,255,255,0)'],
+                    [40, '#a50026'],
+                    [46, '#d73027'],
+                    [52, '#f46d43'],
+                    [58, '#fdae61'],
+                    [64, '#fee08b'],
+                    [70, '#ffffbf'],
+                    [76, '#d9ef8b'],
+                    [82, '#a6d96a'],
+                    [88, '#66bd63'],
+                    [94, '#1a9850'],
+                    [100, '#006837']]
+            },
+            'fill-opacity': {
+              stops:[[0,0.5],[8,0.5],[10,0]]
+            }
+        }
+
+},"airport-label"
+);         
+
+
+var toggleableLayerIds = [ 'Overall','Educatn','Health','Housing','Food','Work'];
 
     var toggleableLayers = [
-      { ids: ['county'], name: 'Country'},
+      { ids: ['county'], name: 'Overall'},
+      { ids: ['Educatn'], name: 'Education'},
+      { ids: ['Health'], name: 'Health'},
+      { ids: ['Housing'], name: 'Housing'},
+      { ids: ['Food'], name: 'Food'},
+      { ids: ['Work'], name: 'Work'},
     ];
 
     var menu = document.getElementById('menu');
@@ -104,7 +271,7 @@ var toggleableLayerIds = [ 'Country'
 
 map.on('mousemove', function (e) {
         var county = map.queryRenderedFeatures(e.point, {
-           layers: ['county']
+           layers: ['county', 'Educatn','Health','Housing','Food','Work']
         });
 
           updateSidebar(county[0].properties);

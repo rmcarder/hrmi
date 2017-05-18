@@ -11,57 +11,49 @@ var container = d3.select('#overlay-ses');
 
 var layout = [
   {
-    title: 'SERF Data - Overall Categories',
+    title: 'SERF Data - Overall',
     items: [
-      { title: 'Overall', code: 'SERF' },
-      { title: 'Education', code: 'Educatn' },
-      { title: 'Health', code: 'Health' },
-      { title: 'Housing', code: 'Housing' },
-      { title: 'Food', code: 'Food' },
-      { title: 'Work', code: 'Work' }
+      { title: 'SERF Score', code: 'SERF' }
     ]
   },
   {
     title: 'Education Subcategories',
     items: [
-      { title: 'Aged 65 or Over', code: 'EPL_AGE65' },
-      { title: 'Aged 17 or Younger', code: 'EPL_AGE17' },
-      { title: 'Civilian w/ a Disability', code: 'EPL_DISABL' },
-      { title: 'Single-Parent Households', code: 'EPL_SNGPNT' }
+      { title: 'Education Overall', code: 'Educatn' },
+      { title: 'Gross School Enrollment', code: 'EnrllAP' },
+      { title: 'Primary School Completion', code: 'PrmryAP' }
+
     ]
   },
   {
     title: 'Health Subcategories',
     items: [
-      { title: 'Minority', code: 'EPL_MINRTY' },
-      { title: 'Speak English "Less than Well"', code: 'EPL_LIMENG' }
+      { title: 'Health Overall', code: 'Health' },
+      { title: 'Child Survival', code: 'ChldSAP' },
+      { title: 'Age 65 Survival', code: 'Ag65AdP' },
+      { title: 'Contraceptive Use', code: 'CntrcAP' }
     ]
   },
   {
     title: 'Housing Subcategories',
     items: [
-      { title: 'Multi-Unit Structures', code: 'EPL_MUNIT' },
-      { title: 'Mobile Homes', code: 'EPL_MOBILE' },
-      { title: 'Crowding', code: 'EPL_CROWD' },
-      { title: 'No Vehicle', code: 'EPL_NOVEH' }
+      { title: 'Housing Overall', code: 'Housing' },
+      { title: 'Improved Sanitation', code: 'SnttnAP' },
+      { title: 'Rural Access to Improved Water', code: 'RIH20AP' }
     ]
   },
    {
     title: 'Food Subcategories',
     items: [
-      { title: 'Multi-Unit Structures', code: 'EPL_MUNIT' },
-      { title: 'Mobile Homes', code: 'EPL_MOBILE' },
-      { title: 'Crowding', code: 'EPL_CROWD' },
-      { title: 'No Vehicle', code: 'EPL_NOVEH' }
+      { title: 'Food Overall', code: 'Food' },
+      { title: 'Age 5 Not Stunted', code: 'Stnt_AP' }
     ]
   },
    {
     title: 'Work Subcategories',
     items: [
-      { title: 'Multi-Unit Structures', code: 'EPL_MUNIT' },
-      { title: 'Mobile Homes', code: 'EPL_MOBILE' },
-      { title: 'Crowding', code: 'EPL_CROWD' },
-      { title: 'No Vehicle', code: 'EPL_NOVEH' }
+      { title: 'Work Overall', code: 'Work' },
+      { title: 'Population Not Poor', code: 'NtPrAdP' }
     ]
   }
 ];
@@ -130,21 +122,21 @@ function updateSidebar(options) {
   items = items.merge(itemEnter);
 
 
-  var img = items.selectAll('div.flag-col').data(function(data) {
-    return data.value > 0.9 ? [data] : [];
-  });
+  //var img = items.selectAll('div.flag-col').data(function(data) {
+//    return data.value > 0.9 ? [data] : [];
+//  });
 
-  img.exit().remove();
+ // img.exit().remove();
 
-  img
-    .enter()
-    .append('div')
-    .attr('class', 'flag-col fl w-10')
-    .append('img')
-    .attr('src', 'icons/flag.svg')
-    .attr('width', 12)
-    .style('vertical-align', 'top')
-    .attr('height', 12);
+ // img
+ //   .enter()
+ //   .append('div')
+ //   .attr('class', 'flag-col fl w-10')
+ //   .append('img')
+ //   .attr('src', 'icons/flag.svg')
+ //   .attr('width', 12)
+ //   .style('vertical-align', 'top')
+ //   .attr('height', 12);
 
 
   var svg = items.selectAll('g').data(function(data) {
