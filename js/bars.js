@@ -1,8 +1,8 @@
 var barwidth = 120;
 var barheight = 14;
-var color_range = ['#a50026','#d73027','#f46d43','#fdae61','#fee08b','#ffffbf','#d9ef8b','#a6d96a','#66bd63','#1a9850','#006837'];
+var color_range = ['#a50026','#d73027','#f46d43','#fdae61','#fee090','#ffffbf','#e0f3f8','#abd9e9','#74add1','#4575b4','#313695'];
 var width = d3.scaleLinear().domain([0, 100]).range([0, 70]);
-var data_bins = [9, 18, 27, 36, 45, 54, 63, 72, 81, 90, 100];
+var data_bins = [50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
 var colorScale = d3.scaleLinear().domain(data_bins).range(color_range);
 
 var container = d3.select('#overlay-ses');
@@ -10,12 +10,7 @@ var container = d3.select('#overlay-ses');
 //<img src="icons/flag.svg" onerror="this.src='icon/flag.png'" style="width:12px;height:12px;">
 
 var layout = [
-  {
-    title: 'SERF Data - Overall',
-    items: [
-      { title: 'SERF Score', code: 'SERF' }
-    ]
-  },
+  
   {
     title: 'Education',
     items: [

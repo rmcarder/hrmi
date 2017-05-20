@@ -13,7 +13,7 @@ html, body {
     color: #fff;
 }
 
-h2, h3 {
+h1,h2, h3 {
     font-size: 1.5em;
     font-weight: 600;
     font-family: 'Alegreya Sans SC', sans-serif;
@@ -103,12 +103,12 @@ a {color: #fff;
     transition-property: background-color, color;
     transition-duration: .2s;
     transition-timing-function: ease-out;
-    background-color: #332A85;
+    background-color: #65000A;
     color: #fff;
 }
 
 #menu a.active:hover {
-    background: #332A85;
+    background: #65000A;
 }
 
 .menutitles{
@@ -133,9 +133,9 @@ a {color: #fff;
 }
 
 .btn-primary {
-    background: #332A85;
+    background: #65000A;
     color: #ffffff;
-    border-color: #332A85;
+    border-color: #65000A;
 }
 
 #legend {

@@ -38,6 +38,7 @@ map.addLayer({
     "source": "maps",
     "source-layer":"Output-74ybcd",
     "maxzoom": 10,
+    'layout': {'visibility':'visible'},
     paint: {
             'fill-color': {
                 property: 'SERF',
@@ -45,17 +46,17 @@ map.addLayer({
                 stops: [
                
                     [.001, 'rgba(255,255,255,0)'],
-                    [40, '#a50026'],
-                    [46, '#d73027'],
-                    [52, '#f46d43'],
-                    [58, '#fdae61'],
-                    [64, '#fee08b'],
-                    [70, '#ffffbf'],
-                    [76, '#d9ef8b'],
-                    [82, '#a6d96a'],
-                    [88, '#66bd63'],
-                    [94, '#1a9850'],
-                    [100, '#006837']]
+                    [50, '#a50026'],
+                    [55, '#d73027'],
+                    [60, '#f46d43'],
+                    [65, '#fdae61'],
+                    [70, '#fee090'],
+                    [75, '#ffffbf'],
+                    [80, '#e0f3f8'],
+                    [85, '#abd9e9'],
+                    [90, '#74add1'],
+                    [95, '#4575b4'],
+                    [100, '#313695']]
             },
             'fill-opacity': {
               stops:[[0,0.5],[8,0.5],[10,0]]
@@ -71,24 +72,25 @@ map.addLayer({
     "source": "maps",
     "source-layer":"Output-74ybcd",
     "maxzoom": 10,
+    'layout': {'visibility':'none'},
     paint: {
             'fill-color': {
                 property: 'Educatn',
                 type: 'exponential',
                 stops: [
                
-                    [.001, 'rgba(255,255,255,0)'],
-                    [40, '#a50026'],
-                    [46, '#d73027'],
-                    [52, '#f46d43'],
-                    [58, '#fdae61'],
-                    [64, '#fee08b'],
-                    [70, '#ffffbf'],
-                    [76, '#d9ef8b'],
-                    [82, '#a6d96a'],
-                    [88, '#66bd63'],
-                    [94, '#1a9850'],
-                    [100, '#006837']]
+               [.001, 'rgba(255,255,255,0)'],
+                    [50, '#a50026'],
+                    [55, '#d73027'],
+                    [60, '#f46d43'],
+                    [65, '#fdae61'],
+                    [70, '#fee090'],
+                    [75, '#ffffbf'],
+                    [80, '#e0f3f8'],
+                    [85, '#abd9e9'],
+                    [90, '#74add1'],
+                    [95, '#4575b4'],
+                    [100, '#313695']]
             },
             'fill-opacity': {
               stops:[[0,0.5],[8,0.5],[10,0]]
@@ -103,24 +105,25 @@ map.addLayer({
     "source": "maps",
     "source-layer":"Output-74ybcd",
     "maxzoom": 10,
+    'layout': {'visibility':'none'},
     paint: {
             'fill-color': {
                 property: 'Health',
                 type: 'exponential',
                 stops: [
                
-                    [.001, 'rgba(255,255,255,0)'],
-                    [40, '#a50026'],
-                    [46, '#d73027'],
-                    [52, '#f46d43'],
-                    [58, '#fdae61'],
-                    [64, '#fee08b'],
-                    [70, '#ffffbf'],
-                    [76, '#d9ef8b'],
-                    [82, '#a6d96a'],
-                    [88, '#66bd63'],
-                    [94, '#1a9850'],
-                    [100, '#006837']]
+               [.001, 'rgba(255,255,255,0)'],
+                    [50, '#a50026'],
+                    [55, '#d73027'],
+                    [60, '#f46d43'],
+                    [65, '#fdae61'],
+                    [70, '#fee090'],
+                    [75, '#ffffbf'],
+                    [80, '#e0f3f8'],
+                    [85, '#abd9e9'],
+                    [90, '#74add1'],
+                    [95, '#4575b4'],
+                    [100, '#313695']]
             },
             'fill-opacity': {
               stops:[[0,0.5],[8,0.5],[10,0]]
@@ -135,24 +138,25 @@ map.addLayer({
     "source": "maps",
     "source-layer":"Output-74ybcd",
     "maxzoom": 10,
+    'layout': {'visibility':'none'},
     paint: {
             'fill-color': {
                 property: 'Housing',
                 type: 'exponential',
                 stops: [
                
-                    [.001, 'rgba(255,255,255,0)'],
-                    [40, '#a50026'],
-                    [46, '#d73027'],
-                    [52, '#f46d43'],
-                    [58, '#fdae61'],
-                    [64, '#fee08b'],
-                    [70, '#ffffbf'],
-                    [76, '#d9ef8b'],
-                    [82, '#a6d96a'],
-                    [88, '#66bd63'],
-                    [94, '#1a9850'],
-                    [100, '#006837']]
+               [.001, 'rgba(255,255,255,0)'],
+                    [50, '#a50026'],
+                    [55, '#d73027'],
+                    [60, '#f46d43'],
+                    [65, '#fdae61'],
+                    [70, '#fee090'],
+                    [75, '#ffffbf'],
+                    [80, '#e0f3f8'],
+                    [85, '#abd9e9'],
+                    [90, '#74add1'],
+                    [95, '#4575b4'],
+                    [100, '#313695']]
             },
             'fill-opacity': {
               stops:[[0,0.5],[8,0.5],[10,0]]
@@ -167,24 +171,25 @@ map.addLayer({
     "source": "maps",
     "source-layer":"Output-74ybcd",
     "maxzoom": 10,
+    'layout': {'visibility':'none'},
     paint: {
             'fill-color': {
                 property: 'Food',
                 type: 'exponential',
                 stops: [
                
-                    [.001, 'rgba(255,255,255,0)'],
-                    [40, '#a50026'],
-                    [46, '#d73027'],
-                    [52, '#f46d43'],
-                    [58, '#fdae61'],
-                    [64, '#fee08b'],
-                    [70, '#ffffbf'],
-                    [76, '#d9ef8b'],
-                    [82, '#a6d96a'],
-                    [88, '#66bd63'],
-                    [94, '#1a9850'],
-                    [100, '#006837']]
+               [.001, 'rgba(255,255,255,0)'],
+                    [50, '#a50026'],
+                    [55, '#d73027'],
+                    [60, '#f46d43'],
+                    [65, '#fdae61'],
+                    [70, '#fee090'],
+                    [75, '#ffffbf'],
+                    [80, '#e0f3f8'],
+                    [85, '#abd9e9'],
+                    [90, '#74add1'],
+                    [95, '#4575b4'],
+                    [100, '#313695']]
             },
             'fill-opacity': {
               stops:[[0,0.5],[8,0.5],[10,0]]
@@ -199,24 +204,25 @@ map.addLayer({
     "source": "maps",
     "source-layer":"Output-74ybcd",
     "maxzoom": 10,
+    'layout': {'visibility':'none'},
     paint: {
             'fill-color': {
                 property: 'Work',
                 type: 'exponential',
                 stops: [
                
-                    [.001, 'rgba(255,255,255,0)'],
-                    [40, '#a50026'],
-                    [46, '#d73027'],
-                    [52, '#f46d43'],
-                    [58, '#fdae61'],
-                    [64, '#fee08b'],
-                    [70, '#ffffbf'],
-                    [76, '#d9ef8b'],
-                    [82, '#a6d96a'],
-                    [88, '#66bd63'],
-                    [94, '#1a9850'],
-                    [100, '#006837']]
+               [.001, 'rgba(255,255,255,0)'],
+                    [50, '#a50026'],
+                    [55, '#d73027'],
+                    [60, '#f46d43'],
+                    [65, '#fdae61'],
+                    [70, '#fee090'],
+                    [75, '#ffffbf'],
+                    [80, '#e0f3f8'],
+                    [85, '#abd9e9'],
+                    [90, '#74add1'],
+                    [95, '#4575b4'],
+                    [100, '#313695']]
             },
             'fill-opacity': {
               stops:[[0,0.5],[8,0.5],[10,0]]
@@ -242,8 +248,8 @@ var toggleableLayerIds = [ 'Overall','Educatn','Health','Housing','Food','Work']
 
     function hideAllLayers() {
       toggleableLayers.forEach(function(layer, i) {
-        var link = menu.children[i];
-        link.className = '';
+        var stink = menu.children[i];
+        stink.className = '';
         layer.ids.forEach(function(layerId) {
           map.setLayoutProperty(layerId, 'visibility', 'none');
         });
