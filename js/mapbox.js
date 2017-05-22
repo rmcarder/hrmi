@@ -4,9 +4,8 @@ var tract=0;
 
 var geocoder = new MapboxGeocoder({
   accessToken: mapboxgl.accessToken,
-  zoom: 14,
-  types: 'region,postcode,district,place',
-  country: 'US'
+  zoom: 3,
+  types: 'country',
 });
 
 var map = new mapboxgl.Map({
@@ -14,7 +13,7 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/rmcarder/cj2s919rw00002sogl9xsofqc',
   zoom: 2,
   hash:true,
-  center: [12,90],
+  center: [32,12],
   minZoom: 2,
   // We only need to preserve drawing buffer if we implement printing
   // otherwise it is a performance drawback
@@ -23,7 +22,10 @@ var map = new mapboxgl.Map({
 });
 
 //map.addControl(new mapboxgl.AttributionControl(), 'bottom-left');
-map.addControl(geocoder, 'top-left');
+d3.select('#search')
+  .node()
+  .appendChild(geocoder.onAdd(map));
+
 map.on('load', function() {
 
 map.addSource("maps", {
